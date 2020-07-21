@@ -12,7 +12,6 @@ class PokemonForm extends React.Component {
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
   handleSubmit = e => {
-    console.log("ok")
     e.preventDefault()
     const { name, hp, frontUrl, backUrl } = this.state
     fetch('http://localhost:3000/pokemon', {
@@ -36,8 +35,6 @@ class PokemonForm extends React.Component {
   }
 
   render() {
-    console.log(this.state)
-
     const { handleChange, handleSubmit } = this
     return (
       <div>

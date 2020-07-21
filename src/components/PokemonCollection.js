@@ -5,7 +5,6 @@ import { Card } from 'semantic-ui-react'
 class PokemonCollection extends React.Component {
 
    render() {
-      console.log(this.props)
       let filteredpokemons = this.props.pokemons.filter( pokemon => pokemon.name.includes(`${this.props.searchQuery}`))
        let displayPokemons = this.props.searchQuery === null ? this.props.pokemons : filteredpokemons
     return (
